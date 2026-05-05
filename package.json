@@ -1,0 +1,19 @@
+{
+  "name": "team-task-manager",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "description": "TeamTrack: Advanced team and task management system built with React and Express.",
+  "type": "module",
+  "scripts": {
+    "postinstall": "npm install --prefix backend && npm install --prefix client --include=dev",
+    "build": "npm run build --prefix client",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix client\"",
+    "start": "node backend/src/server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
